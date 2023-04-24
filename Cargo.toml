@@ -1,0 +1,15 @@
+[package]
+name = "wasm-astar"
+version = "0.1.0"
+authors = ["Jacob Deichert <git@jakedeichert.com>"]
+
+[profile.release]
+lto = true
+opt-level = 's'
+
+[lib]
+path = "src/lib.rs"
+crate-type = ["cdylib"]
+
+[dependencies]
+lazy_static = "1.0"
